@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.core.exceptions import ValidationError
-from apps.payment.models import Payment
+from Zexel_Test_Level.api.apps.payment.models.payment import Payment
 from decimal import Decimal
 
 class PaymentModelTest(TestCase):

@@ -3,7 +3,7 @@ from decimal import Decimal
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
-from apps.payment.models import Payment
+from Zexel_Test_Level.api.apps.payment.models.payment import Payment
 
 class DecimalEncoder(json.JSONEncoder):
     def default(self, obj):

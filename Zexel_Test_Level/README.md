@@ -71,10 +71,10 @@ Para más detalles sobre la implementación y cómo ejecutar el proyecto, consul
 ## 📋 Lista de Tareas
 
 ### 🏗️ Infraestructura
-- [ ] Configura PostgreSQL con Docker:
+- [X] Configura PostgreSQL con Docker:
   - Crea un contenedor Docker para PostgreSQL
   - Configura las variables de entorno necesarias
-- [ ] Integra Django con PostgreSQL:
+- [X] Integra Django con PostgreSQL:
   - Modifica la configuración de Django para usar PostgreSQL
   - Realiza las migraciones necesarias
 
@@ -106,7 +106,7 @@ Para más detalles sobre la implementación y cómo ejecutar el proyecto, consul
   - [ ] Valida que los códigos de moneda sean ISO válidos
   - [ ] Asegúrate de que el país origen y destino sean diferentes
 - Optimiza Modelos:
-  - [ ] Revisa y ajusta los tipos de datos en los modelos para mayor eficiencia
+  - [ ] Revisa y ajusta los tipos de datos en los modelos para mayor eficiencia WIP
 - Implementa Sistema de Cambio de Divisas:
   - [ ] Integra una librería de conversión de divisas (ej. Forex-Python)
   - [ ] Crea un servicio para manejar las conversiones de moneda en tiempo real
