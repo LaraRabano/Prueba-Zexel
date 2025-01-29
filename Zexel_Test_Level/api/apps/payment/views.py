@@ -1,5 +1,5 @@
 from rest_framework import viewsets, permissions, filters
-from .models import Payment
+from .models.payment import Payment
 from .serializers import PaymentSerializer
 
 class PaymentViewSet(viewsets.ModelViewSet):
