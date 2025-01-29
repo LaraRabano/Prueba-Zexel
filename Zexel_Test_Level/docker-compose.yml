@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   api:
     build:
@@ -7,7 +9,12 @@ services:
       - ./api:/home/app/web
       - ./api/mediafiles:/home/app/web/mediafiles
     ports:
-      - 8000:8000
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgres://postgres:password@db:5432/dbname
+    depends_on:
+      - db
+
   front:
     build:
       context: ./front
@@ -21,5 +28,17 @@ services:
       - HOST=0.0.0.0
     depends_on:
       - api
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbname
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
 volumes:
   postgres_data:
